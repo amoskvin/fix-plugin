@@ -1,0 +1,32 @@
+/*
+ * Copyright (C) 2023  Alec Moskvin <code@netreq.com>
+ * SPDX-License-Identifier: LGPL-3.0-only
+ */
+{
+  parserClass="com.netreq.fix.plugin.FixParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Fix"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.netreq.fix.plugin.psi"
+  psiImplPackage="com.netreq.fix.plugin.psi.impl"
+
+  elementTypeHolderClass="com.netreq.fix.plugin.psi.FixTypes"
+  elementTypeClass="com.netreq.fix.plugin.psi.FixElementType"
+  tokenTypeClass="com.netreq.fix.plugin.psi.FixTokenType"
+
+  psiImplUtilClass="com.netreq.fix.plugin.psi.FixPsiImplUtil"
+}
+
+fixFile ::= (message | JUNK)*
+
+message ::= (field SEP)+ field?
+{
+    methods = [ getSpecVersionId ]
+}
+
+field ::= (TAG EQ VALUE)
+{
+    methods = [ getSpecVersionId getTag getTagStr getValue ]
+}
