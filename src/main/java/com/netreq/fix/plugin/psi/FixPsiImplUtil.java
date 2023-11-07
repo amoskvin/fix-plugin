@@ -17,7 +17,11 @@ public class FixPsiImplUtil {
     private static final Key<CachedValue<Integer>> VERSION_KEY = Key.create("spec version");
 
     public static int getTag(FixField element) {
-        return Integer.parseInt(getTagStr(element));
+        try {
+            return Integer.parseInt(getTagStr(element));
+        } catch (NumberFormatException e) {
+            return 0;
+        }
     }
 
     public static String getTagStr(FixField element) {

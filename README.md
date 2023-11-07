@@ -1,5 +1,7 @@
 # FIX Protocol Plugin
 
+**[Install from JetBrains Marketplace](https://plugins.jetbrains.com/plugin/23052-fix-protocol)**
+
 <!-- Plugin description -->
 The FIX Protocol plugin makes it easier to read FIX Protocol messages.
 

@@ -27,7 +27,7 @@ public class FixFileType extends LanguageFileType {
     @NotNull
     @Override
     public String getDescription() {
-        return "FIX log";
+        return "FIX";
     }
 
     @NotNull

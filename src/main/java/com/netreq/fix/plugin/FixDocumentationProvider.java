@@ -24,7 +24,6 @@ public class FixDocumentationProvider extends AbstractDocumentationProvider {
     }
 
     private String renderFullDoc(FixField field) {
-        int tag = field.getTag();
         FixDictionaryService service = ApplicationManager.getApplication().getService(FixDictionaryService.class);
         FixDictionaryService.FieldDetails details = service.getFieldDetails(field);
         if (details == null) {
@@ -41,7 +40,7 @@ public class FixDocumentationProvider extends AbstractDocumentationProvider {
 
         StringBuilder sb = new StringBuilder();
         sb.append(DocumentationMarkup.DEFINITION_START);
-        sb.append("Tag ").append(tag).append(" (").append(details.fieldName()).append(')');
+        sb.append("Tag ").append(field.getTagStr()).append(" (").append(details.fieldName()).append(')');
         String valueName = details.valueName();
         if (valueName != null) {
             sb.append(" = ").append(field.getValue()).append(" (").append(valueName).append(')');
