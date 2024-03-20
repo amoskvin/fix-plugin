@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-- Update compatibility for 2024.1
+- Updated compatibility for 2024.1
 
 ## [1.0.0] - 2023-11-07
 
