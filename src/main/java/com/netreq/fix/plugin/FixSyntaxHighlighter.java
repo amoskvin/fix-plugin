@@ -33,8 +33,9 @@ public class FixSyntaxHighlighter extends SyntaxHighlighterBase {
         return new FixLexer();
     }
 
+    @NotNull
     @Override
-    public TextAttributesKey @NotNull [] getTokenHighlights(IElementType tokenType) {
+    public TextAttributesKey[] getTokenHighlights(IElementType tokenType) {
         if (tokenType.equals(FixTypes.TAG)) {
             return TAG_KEYS;
         }

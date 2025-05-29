@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- Updated compatibility for 2025.2
+
 ## [1.0.1] - 2024-03-20
 
 - Updated compatibility for 2024.1

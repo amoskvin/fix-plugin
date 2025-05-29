@@ -1,13 +1,15 @@
 [versions]
 # libraries
-mockito = "5.10.0"
+junit = "4.13.2"
+mockito = "5.18.0"
 
 # plugins
-changelog = "2.2.0"
-gradleIntelliJPlugin = "1.17.2"
-qodana = "0.1.13"
+changelog = "2.2.1"
+intelliJPlatform = "2.6.0"
+qodana = "2024.3.4"
 
 [libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
 mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
 
 [bundles]
@@ -15,5 +17,5 @@ mockito = ["mockito-core"]
 
 [plugins]
 changelog = { id = "org.jetbrains.changelog", version.ref = "changelog" }
-gradleIntelliJPlugin = { id = "org.jetbrains.intellij", version.ref = "gradleIntelliJPlugin" }
+intelliJPlatform = { id = "org.jetbrains.intellij.platform", version.ref = "intelliJPlatform" }
 qodana = { id = "org.jetbrains.qodana", version.ref = "qodana" }
