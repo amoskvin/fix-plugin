@@ -295,7 +295,7 @@ public class FixLexer extends LexerBase {
             case SEP_SOH -> "\001";
             case SEP_PIPE -> "|";
             case SEP_CTRLA -> "^A";
-            default -> null;
+            default -> throw new IllegalStateException("Unknown separator");
         };
     }
 
