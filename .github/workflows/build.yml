@@ -135,6 +135,7 @@ jobs:
       contents: write
       checks: write
       pull-requests: write
+      security-events: write
     steps:
 
       # Free GitHub Actions Environment Disk Space
